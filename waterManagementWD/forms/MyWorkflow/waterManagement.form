@@ -1,0 +1,119 @@
+{
+    "id": "watermanagement",
+    "schemaVersion": "1.1.0",
+    "name": "waterManagement",
+    "revision": "1.0",
+    "type": "task",
+    "readOnly": true,
+    "content": [
+        {
+            "id": "water_emission",
+            "type": "section",
+            "title": "Data Scope",
+            "content": [
+                {
+                    "id": "start_date",
+                    "type": "string",
+                    "label": "Start Date",
+                    "readOnly": true,
+                    "value": "${context.startDate}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "end_date",
+                    "type": "string",
+                    "label": "End Date",
+                    "readOnly": true,
+                    "value": "${context.endDate}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "reporting_year",
+                    "type": "string",
+                    "label": "Reporting Year",
+                    "readOnly": false,
+                    "value": "${context.reportingYear}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "country_area",
+                    "type": "string",
+                    "label": "Country/Area",
+                    "readOnly": true,
+                    "value": "${context.reportingCountry}",
+                    "constraints": {
+                        "required": true
+                    }
+                },
+                {
+                    "id": "total_water_withdrwan",
+                    "type": "string",
+                    "label": "Total water withdrawn inThousand cubic meters (m³) ",
+                    "readOnly": true,
+                    "value": "${context.TotalWaterWithDrawn}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "total_water_consumed",
+                    "type": "string",
+                    "label": "Total water consumed in Thousand cubic meters (m³)",
+                    "readOnly": true,
+                    "value": "${context.TotalWaterConsumed}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "water_stress_in_each_region_in_percentage",
+                    "type": "string",
+                    "label": "Water Stress in Percentage in each region in %",
+                    "readOnly": true,
+                    "value": "${context.TotalWaterStress}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "approvers",
+                    "type": "string",
+                    "label": "Approvers",
+                    "readOnly": false,
+                    "value": "${context.approvers}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "comments",
+                    "type": "string",
+                    "label": "Comments",
+                    "readOnly": false,
+                    "value": "${context.Comments}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

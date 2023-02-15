@@ -1,0 +1,108 @@
+_schema-version: "3.2"
+ID: waterManagement
+version: 0.0.10
+modules:
+- name: waterManagementWD
+  type: com.sap.application.content
+  path: waterManagementWD
+  requires:
+  - name: sap_processautomation
+    parameters:
+      content-target: true
+      service-key:
+        config:
+          deployUsageScenario: workflow
+        name: spa-workflow-service-key
+- name: waterManagement-destination-content
+  type: com.sap.application.content
+  requires:
+  - name: waterManagement-destination-service
+    parameters:
+      content-target: true
+  - name: waterManagement_html_repo_host
+    parameters:
+      service-key:
+        name: waterManagement_html_repo_host-key
+  - name: uaa_waterManagement
+    parameters:
+      service-key:
+        name: uaa_waterManagement-key
+  parameters:
+    content:
+      subaccount:
+        destinations:
+        - Name: watermanagement_waterManagement_html_repo_host
+          ServiceInstanceName: waterManagement-html5-app-host-service
+          ServiceKeyName: waterManagement_html_repo_host-key
+          sap.cloud.service: watermanagement
+        - Authentication: OAuth2UserTokenExchange
+          Name: watermanagement_uaa_waterManagement
+          ServiceInstanceName: waterManagement-xsuaa-service
+          ServiceKeyName: uaa_waterManagement-key
+          sap.cloud.service: watermanagement
+        existing_destinations_policy: ignore
+  build-parameters:
+    no-source: true
+- name: waterManagement-app-content
+  type: com.sap.application.content
+  path: .
+  requires:
+  - name: waterManagement_html_repo_host
+    parameters:
+      content-target: true
+  build-parameters:
+    build-result: resources
+    requires:
+    - artifacts:
+      - waterworkflowuimodule.zip
+      name: waterworkflowuimodule
+      target-path: resources/
+- name: waterworkflowuimodule
+  type: html5
+  path: water-workflow-ui-module
+  build-parameters:
+    build-result: dist
+    builder: custom
+    commands:
+    - npm install
+    - npm run build:cf
+    supported-platforms: []
+resources:
+- name: sap_processautomation
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: process-automation-service
+    service-plan: standard
+- name: waterManagement-destination-service
+  type: org.cloudfoundry.managed-service
+  parameters:
+    config:
+      HTML5Runtime_enabled: true
+      init_data:
+        subaccount:
+          destinations:
+          - Authentication: NoAuthentication
+            Name: ui5
+            ProxyType: Internet
+            Type: HTTP
+            URL: https://ui5.sap.com
+          existing_destinations_policy: update
+      version: 1.0.0
+    service: destination
+    service-name: waterManagement-destination-service
+    service-plan: lite
+- name: waterManagement_html_repo_host
+  type: org.cloudfoundry.managed-service
+  parameters:
+    service: html5-apps-repo
+    service-name: waterManagement-html5-app-host-service
+    service-plan: app-host
+- name: uaa_waterManagement
+  type: org.cloudfoundry.managed-service
+  parameters:
+    path: ./xs-security.json
+    service: xsuaa
+    service-name: waterManagement-xsuaa-service
+    service-plan: application
+parameters:
+  deploy_mode: html5-repo

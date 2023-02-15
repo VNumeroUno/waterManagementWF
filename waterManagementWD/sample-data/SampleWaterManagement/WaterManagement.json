@@ -1,0 +1,9 @@
+{
+    "startDate":"2022-04-23T12:00:00.441Z",
+    "endDate":"2023-03-23T12:00:00.441Z",
+    "CountryArea":"Austria",
+    "CurrencyUsed":"USD",
+    "TotalWaterWithDrawn":"1000000.000",
+    "TotalWaterConsumed":"1000000.000",
+    "waterStressinPercentage":"70"
+}
