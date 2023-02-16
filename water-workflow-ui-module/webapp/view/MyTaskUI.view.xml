@@ -4,51 +4,51 @@
             <Page showHeader="false" showFooter="false">
 				<content>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Select the Countries/Area will be supplying data: " />
+						<Text class="sapUiTinyMarginEnd" text="Select the Countries/Area will be supplying data: " />
 						<Text text="{context>/reportingCountry}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Reporting Year: " />
+						<Text class="sapUiTinyMarginEnd" text="Reporting Year: " />
 						<Text text="{context>/reportingYear}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Start Date of Reporting Year: " />
+						<Text class="sapUiTinyMarginEnd" text="Start Date of Reporting Year: " />
 						<Text text="{context>/startDate}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="End Date of Reporting Year: " />
+						<Text class="sapUiTinyMarginEnd" text="End Date of Reporting Year: " />
 						<Text text="{context>/endDate}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Total Water withdrawn in thousand cubic meters: " />
+						<Text class="sapUiTinyMarginEnd" text="Total Water withdrawn in thousand cubic meters: " />
 						<Text text="{context>/TotalWaterWithDrawn}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Total Water Consumed in thousand cubic meters: " />
+						<Text class="sapUiTinyMarginEnd" text="Total Water Consumed in thousand cubic meters: " />
 						<Text text="{context>/TotalWaterConsumed}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Percentage of each in regions with High or Extremely High Baseline Water Stress in Percentage: " />
+						<Text class="sapUiTinyMarginEnd" text="Percentage of each in regions with High or Extremely High Baseline Water Stress in Percentage: " />
 						<Text text="{context>/TotalWaterStress}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Data Owner: " />
+						<Text class="sapUiTinyMarginEnd" text="Data Owner: " />
 						<Text text="{task>/CreatedByName}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Additional Reporter: " />
+						<Text class="sapUiTinyMarginEnd" text="Additional Reporter: " />
 						<Text text="Christopher Tam, Nidhideep Bhandari, Demo User" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Reporting Country: " />
+						<Text class="sapUiTinyMarginEnd" text="Reporting Country: " />
 						<Text text="{context>/ReportingCountry}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="Comments: " />
+						<Text class="sapUiTinyMarginEnd" text="Comments: " />
 						<TextArea rows="5" cols="100" value="{context>/Comments}" editable="true" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
-						<Text class="sapUiSmallMarginEnd" text="To be approved by: " />
+						<Text class="sapUiTinyMarginEnd" text="To be approved by: " />
 						<Text text="{context>/approvers}" />
 					</HBox>
 					<Button text="Download Attachment" icon="sap-icon://download" class="sapUiSmallMarginTop sapUiTinyMarginBegin" />
