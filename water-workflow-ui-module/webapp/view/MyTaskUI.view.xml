@@ -21,11 +21,11 @@
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiSmallMarginEnd" text="Total Water withdrawn in thousand cubic meters: " />
-						<Text text="{context>/TotalWaterWithdrawn} (m3)" />
+						<Text text="{context>/TotalWaterWithDrawn}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiSmallMarginEnd" text="Total Water Consumed in thousand cubic meters: " />
-						<Text text="{context>/TotalWaterConsumed} (m3)" />
+						<Text text="{context>/TotalWaterConsumed}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiSmallMarginEnd" text="Percentage of each in regions with High or Extremely High Baseline Water Stress in Percentage: " />
