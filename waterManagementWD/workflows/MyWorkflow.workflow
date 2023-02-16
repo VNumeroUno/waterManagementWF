@@ -4,7 +4,7 @@
 			"classDefinition": "com.sap.bpm.wfs.Model",
 			"id": "waterWorkflow",
 			"subject": "Water Management Work Flow",
-			"businessKey": "waterworkflow",
+			"businessKey": "",
 			"customAttributes": [],
 			"name": "WaterWorkflow",
 			"documentation": "",
@@ -77,16 +77,9 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": true,
-			"userInterface": "sapui5://comsapbpmworkflow.comsapbpmwusformplayer/com.sap.bpm.wus.form.player",
+			"userInterface": "sapui5://cprailinbox.waterworkflowuimodule/waterworkflowuimodule",
 			"recipientUsers": "${context.approvers}",
-			"formReference": "/forms/MyWorkflow/waterManagement.form",
-			"userInterfaceParams": [{
-				"key": "formId",
-				"value": "watermanagement"
-			}, {
-				"key": "formRevision",
-				"value": "1.0"
-			}],
+			"userInterfaceParams": [],
 			"customAttributes": [],
 			"id": "usertask1",
 			"name": "Water Approval"
@@ -103,7 +96,7 @@
 			"priority": "MEDIUM",
 			"isHiddenInLogForParticipant": false,
 			"supportsForward": false,
-			"userInterface": "sapui5://watermanagement.waterworkflowuimodule/waterworkflowuimodule",
+			"userInterface": "sapui5://cprailinbox.waterworkflowuimodule/waterworkflowuimodule",
 			"recipientUsers": "${context.approvers}",
 			"userInterfaceParams": [],
 			"id": "usertask2",
