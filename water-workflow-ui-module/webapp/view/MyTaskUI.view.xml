@@ -5,7 +5,7 @@
 				<content>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiSmallMarginEnd" text="Select the Countries/Area will be supplying data: " />
-						<Text text="{context>/ReportingCountry}" />
+						<Text text="{context>/reportingCountry}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiSmallMarginEnd" text="Reporting Year: " />
