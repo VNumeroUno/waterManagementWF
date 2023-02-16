@@ -41,7 +41,7 @@
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiTinyMarginEnd" text="Reporting Country: " />
-						<Text text="{context>/ReportingCountry}" />
+						<Text text="{context>/reportingCountry}" />
 					</HBox>
 					<HBox alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBegin">
 						<Text class="sapUiTinyMarginEnd" text="Comments: " />
