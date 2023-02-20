@@ -1,6 +1,6 @@
 _schema-version: "3.2"
 ID: waterManagement
-version: 0.0.15
+version: 0.0.16
 modules:
 - name: waterManagementWD
   type: com.sap.application.content
